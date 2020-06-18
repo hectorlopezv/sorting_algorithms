@@ -62,10 +62,11 @@ void cocktail_sort_list(listint_t **list)
 listint_t *bubble_rigth(listint_t **list, listint_t **start,
 		listint_t **end, int *sorted)
 {
-	(void) end;
 	listint_t *prev, *next, *start_t;
 
 	start_t = *start;
+
+	(void) end;
 	/*end_t = *end;*/
 	next = prev = NULL;
 
