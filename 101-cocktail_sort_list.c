@@ -39,7 +39,9 @@ void cocktail_sort_list(listint_t **list)
 		bubble_left(list, &end, &start_mov, &sorted);
 
 		start = start_mov->next;
-		end = end_mov->prev;
+		if (end->next != NULL)
+			end = end_mov->prev;
+
 	} while (sorted);
 
 }
@@ -91,6 +93,7 @@ listint_t *bubble_rigth(listint_t **list, listint_t **start,
 		prev  = start_t;
 		start_t = start_t->next;
 	}
+
 	return (start_t);
 }
 
@@ -108,7 +111,6 @@ void bubble_left(listint_t **list, listint_t **end,
 	listint_t *prev, *end_t;
 
 	end_t = *end;
-
 
 	while (end_t->prev != *start_mov)
 	{
@@ -143,4 +145,5 @@ void bubble_left(listint_t **list, listint_t **end,
 
 	if (*start_mov == NULL)
 		*start_mov = *list;
+
 }
