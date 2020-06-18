@@ -14,11 +14,11 @@ void bubble_left(listint_t **list, listint_t **end, listint_t **start_mov,
 void cocktail_sort_list(listint_t **list)
 {
 
-	listint_t  *start, *prev, *next, *start_mov, *end_mov, *end;
+	listint_t  *start, *start_mov, *end_mov, *end;
 
 	int sorted = 1;
 
-	prev = end_mov = end = NULL;
+	end_mov = end = NULL;
 
 	if (list == NULL || *list == NULL)
 		return;
