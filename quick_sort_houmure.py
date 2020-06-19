@@ -19,10 +19,13 @@ def partition(array, low, max):
             
             if not array[j] > pivot:
                 break
-
+        
+        if (i < j):
+            array[i], array[j] =  array[j], array[i]
+            print(array)
         if i >= j:
             return j
-        array[i], array[j] =  array[j], array[i]
+        
 
 
 def quicksort(array, low, max):
@@ -44,5 +47,8 @@ def quicksort(array, low, max):
 
 array = [19, 48, 99, 71, 13, 52, 96, 73, 86, 7]
 print(array)
+print()
 quicksort(array, 0, len(array) - 1)
+
+print()
 print(array)
