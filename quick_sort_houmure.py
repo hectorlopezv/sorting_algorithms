@@ -42,7 +42,7 @@ def quicksort(array, low, max):
             max = max - 1
 
 
-array = [1, 4, 2, 4, 2, 4, 1, 2, 4, 1, 2, 2, 2, 2, 4, 1, 4, 4, 4]
+array = [19, 48, 99, 71, 13, 52, 96, 73, 86, 7]
 print(array)
 quicksort(array, 0, len(array) - 1)
 print(array)
