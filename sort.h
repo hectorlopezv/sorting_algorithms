@@ -31,4 +31,5 @@ void quick_sort_hoare(int *array, size_t size);
 void swap_(int *array, size_t size, int *a, int *b);
 size_t hoare_partition(int *array, ssize_t size, ssize_t lo, ssize_t hi);
 void quicksort(int *array, size_t size, ssize_t lo, ssize_t hi);
+void counting_sort(int *array, size_t size);
 #endif
