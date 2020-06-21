@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
 
-def merge_(arr, start, mid, end):
+def merge_(arr, start, mid, end, temp):
     """merge list"""
-    temp = [0] * (end - start + 1)
+    #temp = [0] * (end - start + 1)
 
     i = start
     j = mid + 1
@@ -40,7 +40,7 @@ def merge_(arr, start, mid, end):
         i = i + 1
 
 
-def merge_sort_(array1, min_, max_, size):
+def merge_sort_(array1, min_, max_, size, temp):
     """splitting list"""
 
     if min_ >= max_:
@@ -48,19 +48,19 @@ def merge_sort_(array1, min_, max_, size):
 
     pivot = (min_ + max_) // 2
 
-    merge_sort_(array1, min_, pivot, size)
-    merge_sort_(array1, pivot + 1, max_, size)
-    merge_(array1, min_, pivot, max_)
+    merge_sort_(array1, min_, pivot, size, temp)
+    merge_sort_(array1, pivot + 1, max_, size, temp)
+    merge_(array1, min_, pivot, max_, temp)
 
 
-def merge_sort(array):
+def merge_sort(array, temp):
     """merge_sort"""
 
-    merge_sort_(array, 0, len(array) - 1, len(array))
+    merge_sort_(array, 0, len(array) - 1, len(array), temp)
 
 
-array = [2, 7, 6, 4, 1, 8, 5, 3]
-
+array = [19, 48, 99, 71, 13, 52, 96, 73, 86, 7]
+temp = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 print(array)
-merge_sort(array)
+merge_sort(array, temp)
 print(array)
